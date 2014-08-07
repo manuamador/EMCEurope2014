@@ -1,0 +1,124 @@
+% adapted Philippe Dreuw and Thomas Deselaers
+% further adapted from edits by James Malcolm
+% Shawn Lankton made some edits (www.shawnlankton.com)
+% E. Amador changed some things
+
+\ProvidesPackage{beamerthemeedf}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<presentation>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{orangevif}{RGB}{254,88,21}		% #fce94f
+\definecolor{orangeclair}{RGB}{255,160,47}		% #fcaf3e
+\definecolor{vertclair}{RGB}{196,214,0}
+\definecolor{vert}{RGB}{80,158,47}
+\definecolor{bleuclair}{RGB}{0, 91, 187}
+\definecolor{bleu}{RGB}{0,26,112}
+\definecolor{gris}{RGB}{200,200,200}
+
+\setbeamercolor{headline}{bg=bleuclair}
+\setbeamercolor{footline}{bg=bleuclair}
+\setbeamerfont{footline}{size=\large}
+\setbeamercolor{separation line}{bg=black}
+\setbeamercolor{title in headline}{fg=white}
+\setbeamercolor{author in headline}{fg=gris}
+\setbeamercolor{institute in headline}{fg=gris}
+
+\setbeamercolor{framesubtitle}{fg=bleuclair, bg=gray}
+\setbeamercolor{author in head/foot}{fg=black,bg=bleuclair}
+\setbeamercolor{title in head/foot}{fg=black,bg=black}
+\setbeamercolor{website in footline}{fg=black,bg=black}
+\setbeamercolor{email in footline}{fg=black,bg=black}
+
+\setbeamercolor*{normal text}{fg=black, bg=white}
+\setbeamercolor*{block body}{fg=black,bg=white}
+\setbeamercolor*{block title}{fg=white,bg=bleuclair}
+\setbeamerfont{block title}{size=\large,series=\sc\bf}
+\setbeamercolor{upper separation line head}{fg=black}
+\setbeamercolor{itemize item}{fg=bleuclair}
+
+\definecolor{exampleBlockColor}{RGB}{0,204,0}
+\definecolor{exampleTitleBlockColor}{RGB}{0,153,0}
+\definecolor{exampleBlockTextColor}{RGB}{255,255,255}
+\definecolor{exampleBlockTitleTextColor}{RGB}{255,255,255}
+\definecolor{alertBlockColor}{RGB}{255,160,47}
+\definecolor{alertTitleBlockColor}{RGB}{254,88,21}
+\definecolor{alertBlockTextColor}{RGB}{255,255,255}
+\definecolor{alertBlockTitleTextColor}{RGB}{255,255,255}
+
+%\definecolor{normalBlockColor}{RGB}{196,214,0}
+%\definecolor{normalTitleBlockColor}{RGB}{80,158,47}
+%\definecolor{normalBlockTextColor}{RGB}{255,255,255}
+%\definecolor{normalBlockTitleTextColor}{RGB}{255,255,255}
+\setbeamercolor{section in head/foot}{bg=sectionColor, fg=sectionTextColor}
+\setbeamercolor{subsection in head/foot}{bg=subsectionColor, fg=subsectionTextColor}
+%\setbeamercolor*{block title}{fg=normalBlockTitleTextColor,bg=normalTitleBlockColor}
+%\setbeamercolor*{block body}{fg=normalBlockTextColor,bg=normalBlockColor}
+\setbeamercolor*{block title alerted}{fg=alertBlockTitleTextColor,bg=alertTitleBlockColor}
+\setbeamercolor*{block body alerted}{fg=alertBlockTextColor,bg=alertBlockColor}
+\setbeamercolor*{block title example}{fg=exampleBlockTitleTextColor,bg=exampleTitleBlockColor}
+\setbeamercolor*{block body example}{fg=exampleBlockTextColor,bg=exampleBlockColor}
+
+
+\setbeamertemplate{itemize items}[square]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{block begin}{
+  \vskip.5ex
+  \begin{beamercolorbox}[leftskip=1ex,colsep*=.5ex]{block title}%
+    \usebeamerfont*{block title}{\Large \insertblocktitle}
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[colsep*=.5ex,sep=.5ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.5ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+
+      \begin{column}{.01\paperwidth}
+      \end{column}
+
+%      \begin{column}{.02\paperwidth}
+%        \centering
+%        \vskip3ex
+%        \hspace{3ex}\includegraphics[height=0.05\paperwidth]{EDF_LOGO_blanc}
+%      \end{column}
+
+      \begin{column}{1\paperwidth}
+        \vskip6ex
+        \centering
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\huge{\inserttitle}}\\[1ex]}
+        \usebeamercolor{author in headline}{\color{fg}\Large{\insertauthor}\\[1ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}
+        \vskip2ex
+      \end{column}
+
+%      \begin{column}{.10\paperwidth}
+%        \centering
+%        \vskip0ex
+%        \includegraphics[height=0.04\paperwidth]{EDFlab_LOGO_blanc}
+%      \end{column}
+
+      \begin{column}{.08\paperwidth}
+      \end{column}
+
+    \end{columns}
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+}
+
+% \Mode<all>
