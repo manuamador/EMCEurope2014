@@ -1,3 +1,5 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
 \documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
 \mode<presentation>{\usetheme{edf}}
   %\usepackage{times}
@@ -21,13 +23,6 @@
 \usepackage[absolute,overlay]{textpos}
 \usepackage{subfigure}
 
-
-
-%\usefonttheme{professionalfonts}
-%\usefonttheme{serif}
-%\usepackage{fontspec}
-%\setmainfont{Avenir}
-
 \TPGrid[0mm,0mm]{80}{60}
 
 
@@ -44,7 +39,22 @@
 \institute{EDF Lab, Centre R\&D des Renardières, France.\\[0.5cm]\Large{\texttt{emmanuel.amador@edf.fr}}}
 
 %-------------------------------------------------------------------
-
+%\usepackage{fontspec} 
+%%\usepackage[usenames,dvipsnames]{color}
+%\usepackage{xunicode}
+%\usepackage{xltxtra}
+%\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine}
+%\setmonofont[Scale=0.8]{Monaco}
+%
+%%\usepackage{sectsty} 
+%\usepackage[normalem]{ulem} 
+%\sectionfont{\mdseries\upshape\Large}
+%\subsectionfont{\mdseries\scshape\normalsize} 
+%\subsubsectionfont{\mdseries\upshape\large} 
+%\setromanfont{Avenir}
+%\setsansfont{Helvetica Neue Light}
+%\setmonofont{Avenir}
 
 %-- Main Document --------------------------------------------------
 \begin{document}
@@ -65,6 +75,12 @@
 \vrule width 1pt height 86cm
 \end{textblock}
 
+\begin{textblock}{0.1}(56.7,56.4)
+\vrule width 1pt height 6cm
+\end{textblock}
+
+
+
 \begin{frame}{}
 
       \begin{block}{\huge{Summary}}
@@ -80,7 +96,7 @@
 	\vspace{-1cm}
       \begin{block}{Motivation}  \justifying
        \large{The comparison of testing facilities is a subject of interest in the EMC community.
-	 The confidence intervals (generally $\pm 3~dB$) provided by standard measurements~\cite{IEC21,IEC22} does not allow a good agreement between the measurements.
+	 The confidence intervals (generally $\pm 3$~dB) provided by standard measurements~\cite{IEC21,IEC22} does not allow a good agreement between the measurements.
 
       }
 \end{block}
@@ -91,7 +107,7 @@
 \end{minipage}\end{center}
       %-- Block 1-2
       \begin{block}{{Statistical characterization of the susceptibility of a non-intentional emitter}} \justifying
-        \large{ In order to extract the statistics of the E-field radiated by a non-intentional emitter, we use a model of non intentional emitter used by P.~Wilson~\cite{Wilson02}. $n$ random Hertz dipoles are placed arbitrary on a sphere of radius $a$.\\
+        \large{ In order to extract the statistics of the E-field radiated by a non-intentional emitter, we use a model  used in the literature~\cite{Wilson02}. $n$ random Hertz dipoles are placed arbitrary on a sphere of radius~$a$.\\
 We study the effects of the complexity (number of dipoles $n$) and the electrical size $ka=\frac{2\pi}{\lambda}a$ on the statistics of the radiated E-field.
 
 
@@ -156,7 +172,7 @@ Monte Carlo simulations can give an idea of the statistics of the E-field rectan
 \centering
 \includegraphics[trim=0 0 0 0,clip,width=0.7\columnwidth]{./img/TestAD}
 \vspace{-0.3cm}
-\large{\caption{Probability to get a Rayleigh distributed E-field component according to the Anderson-Darling statistical test, $10^5$ Monte Carlo trials for every point}}
+\large{\caption{Probability to get Rayleigh distributed E-field components according to the Anderson-Darling statistical test, $10^5$ Monte Carlo trials for every point}}
 \end{figure}
 
       %-- Block 2-1
@@ -280,11 +296,11 @@ Monte Carlo simulations can give an idea of the statistics of the E-field rectan
 	\end{block}%-- Block 1-2
 
 
-\begin{columns}
+\begin{columns}[t]
 %     %-- Column 1 ---------------------------------------------------
 
  \begin{column}{0.71\linewidth}
-\vspace{-0.3cm}   
+\vspace{-0.8cm}   
 \begin{block}{References} \justifying
 \setbeamertemplate{bibliography item}[text]
 \setbeamercolor{bibliography item}{fg=black,bg=white}
@@ -299,21 +315,23 @@ Monte Carlo simulations can give an idea of the statistics of the E-field rectan
 
     %-- Column 2 ---------------------------------------------------
     \begin{column}{0.2\linewidth}
-    \vspace{-0.4cm}
-  \begin{block}{Acknowledgments}
-    \vspace{-0.5cm}
-Measurements and simulations made with:\\\centerline{\includegraphics[trim=150 120 120 60,clip,width=.3\columnwidth]{./img/python_logo.png}
-\hspace{1cm} \includegraphics[width=.15\columnwidth]{./img/julia.png}}
+    \vspace{0.9cm}
+  %\begin{block}{Acknowledgments}
+    %\vspace{-0.5cm}
+ \hspace{-0.3cm}Measurements and simulations made with:\\
+\centerline{\includegraphics[trim=150 120 120 60,clip,width=.4\columnwidth]{./img/python_logo.png}
+\hspace{1cm} \includegraphics[width=.2\columnwidth]{./img/julia.png}}
+\vspace{0.42cm}
 Poster, data, scripts available at:\\\href{https://github.com/manuamador/EMCEurope2014}{\small{\texttt{https://github.com/manuamador/EMCEurope2014}}}
-      \end{block}
+%      \end{block}
 \end{column}%2
  %-- Column 2 ---------------------------------------------------
 \begin{column}{0.07\linewidth}
 
 \end{column}%2
   \end{columns}
-\begin{textblock}{14}(73.2,56.5)
-\includegraphics[trim=40 40 40 40,clip,scale=.52]{./img/QR.png}
+\begin{textblock}{14}(73.22,56.25)
+\includegraphics[trim=40 40 40 40,clip,scale=.54]{./img/QR.png}
 \end{textblock}
 \end{frame}
 \end{document}
