@@ -75,7 +75,7 @@
 \vrule width 1pt height 86cm
 \end{textblock}
 
-\begin{textblock}{0.1}(56.7,56.4)
+\begin{textblock}{0.1}(56.9,56.32)
 \vrule width 1pt height 6cm
 \end{textblock}
 
@@ -107,9 +107,8 @@
 \end{minipage}\end{center}
       %-- Block 1-2
       \begin{block}{{Statistical characterization of the susceptibility of a non-intentional emitter}} \justifying
-        \large{ In order to extract the statistics of the E-field radiated by a non-intentional emitter, we use a model  used in the literature~\cite{Wilson02}. $n$ random Hertz dipoles are placed arbitrary on a sphere of radius~$a$.\\
+        \large{ In order to extract the statistics of the E-field radiated by a non-intentional emitter, we use Monte Carlo simulations with random non-intentional emitters as in~\cite{Wilson02}. These random emitters consist of $n$ random Hertz dipoles placed arbitrary on a sphere of radius~$a$.
 We study the effects of the complexity (number of dipoles $n$) and the electrical size $ka=\frac{2\pi}{\lambda}a$ on the statistics of the radiated E-field.
-
 
 \vspace{-0.6cm}
 \begin{figure}
@@ -117,28 +116,28 @@ We study the effects of the complexity (number of dipoles $n$) and the electrica
 \vspace{-0.3cm}
 \large{\caption{A non-intentional emitter}}
 \end{figure}}
-
-\vspace{-0.6cm}
+\vspace{-1cm}
 \begin{figure}
      \centering
      \subfigure[$f=20$ MHz, $ka=0.4$, $D\approx 1.6$]{
           \label{fig_800M}      
-          \includegraphics[trim=110 180 90 120,clip,width=0.45\columnwidth]{./img/rp_4.png}} 
+          \includegraphics[trim=110 170 90 180,clip,width=0.48\columnwidth]{./img/rp_4.png}} 
     \subfigure[$f=100$ MHz, $ka=2.1$, $D\approx 2.3$]{
           \label{fig_2G}
-   	  \includegraphics[trim=110 170 90 120,clip,width=0.45\columnwidth]{./img/rp_24.png}}\\
+   	  \includegraphics[trim=110 170 90 180,clip,width=0.48\columnwidth]{./img/rp_24.png}}\\
 \subfigure[$f=500$ MHz, $ka=10.5$, $D\approx 5.2$]{
              \label{fig_800M}      
-          \includegraphics[trim=110 180 90 120,clip,width=0.45\columnwidth]{./img/rp_124.png}} 
+          \includegraphics[trim=110 180 90 180,clip,width=0.48\columnwidth]{./img/rp_124.png}} 
     \subfigure[$f=1000$ MHz, $ka=21.0$, $D\approx 5.7$]{
           \label{fig_2G}
-          \includegraphics[trim=110 180 90 120,clip,width=0.45\columnwidth]{./img/rp_249.png}}
+          \includegraphics[trim=110 180 90 180,clip,width=0.48\columnwidth]{./img/rp_249.png}}
 \vspace{-0.3cm}
     \large{\caption{Radiated power (linear values) of a random EUT with  $a=1$ m and $n=100$ dipoles}}
      \label{fig_diagsr}
 \end{figure}
+%\vspace{-0.3cm}
 Monte Carlo simulations can give an idea of the statistics of the E-field rectangular components:
-%\vspace{0.6cm}
+\vspace{0.3cm}
 \begin{figure}
      \centering
      \subfigure[$ka=1$, $n=4$]{
@@ -295,13 +294,13 @@ Monte Carlo simulations can give an idea of the statistics of the E-field rectan
 \Large{By using a common statistical framework for both the FAR and the RC and as long as the EUT is electrically large and complex, we can extract with a good agreement the immunity levels of an EUT. By giving a statistical dimension to FAR measurements, we can control and enhance the accuracy of the measurement.}
 	\end{block}%-- Block 1-2
 
-
+%\vspace{0.1cm}  
 \begin{columns}[t]
 %     %-- Column 1 ---------------------------------------------------
 
  \begin{column}{0.71\linewidth}
 \vspace{-0.8cm}   
-\begin{block}{References} \justifying
+\begin{block}{References} %\justifying
 \setbeamertemplate{bibliography item}[text]
 \setbeamercolor{bibliography item}{fg=black,bg=white}
 \setbeamercolor{bibliography entry author}{fg=black,bg=white}
